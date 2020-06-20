@@ -1,0 +1,68 @@
+@import "../vars";
+
+footer{
+    background-color: $silver;
+    padding-top: 35px;
+    padding-bottom: 20px;
+    .footer__content{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        .copyrait{
+            font-size: 14px;
+            line-height: 24px;
+            margin-bottom: 15px;
+        }
+        .nav-footer{
+            margin-bottom: 15px;
+            margin-right: auto;
+            margin-left: 16%;
+            ul{
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                margin-left: -20px;
+                margin-right: -20px;
+                li{
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    a{
+                        font-size: 14px;
+                        line-height: 24px;
+                        text-decoration: none;
+                        color: $text;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .soc-icons{
+        margin-bottom: 15px;
+    }
+}
+
+.soc-icons{
+    ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        margin-left: -14px;
+        margin-right: -14px;
+        li{
+            padding-left: 14px;
+            padding-right: 14px;
+            a{
+                display: block;
+                transition: all .25s ease;
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}

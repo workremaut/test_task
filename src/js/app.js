@@ -18,7 +18,6 @@ class App {
                 this._tabsRemoveClass(this._linkTabs);
                 this._tabsRemoveClass(this._itemTabs);
                 target.classList.add('active');
-
                 document.querySelector(id_item).classList.add('active');
             });
         }
