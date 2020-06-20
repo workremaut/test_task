@@ -57,5 +57,99 @@ body{
     margin-right: auto;
 }
 
+a{
+    color: $accent;
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+    &:active{
+        text-decoration: none;
+        color: $second;
+    }
+}
+
+.w-100{
+    width: 100%;
+}
+
+.btn{
+    padding: 10px 20px;
+    font-size: 14px;
+    line-height: 20px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 30px;
+    text-align: center;
+    transition: all .25s ease;
+    &.btn-fill{
+        background-color: $accent;
+        color: #ffffff;
+        &:hover{
+            background-color: $second;
+            text-decoration: none;
+        }
+        &:active{
+            background-color: transparentize($second, .2);
+        }
+    }
+    &.btn-second{
+        padding: 8px 12px;
+        background-color: #f2eafe;
+        color: $second;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1;
+        text-transform: none;
+        &:hover{
+            background-color: $second;
+            color: #ffffff;
+            text-decoration: none !important;
+        }
+        &:active{
+            background-color: transparentize($second, .2);
+        }
+    }
+}
+
+.text-icon{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 12px;
+    line-height: 128.91%;
+    color: $text;
+    position: relative;
+    padding-left: 20px;
+    &::before{
+        content: '';
+        width: 16px;
+        height: 16px;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -8px;
+    }
+
+    & + .text-icon{
+        margin-top: 7px;
+    }
+    &.marker{
+        &::before{
+            background-image: url('../img/icons/marker.svg');
+        }
+    }
+    &.time{
+        &::before{
+            background-image: url('../img/icons/time.svg');
+        }
+    }
+}
+
 
 @import "components/header.scss";
+@import "components/content.scss";
+@import "components/tabs.scss"
