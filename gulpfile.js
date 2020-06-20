@@ -112,7 +112,7 @@ function copy() {
 function startwatch() {
 	watch('src/scss/**/*', parallel('styles'));
 	watch(['src/js/*.js'], parallel('scripts'));
-	watch(['src/pages/*.pug'], parallel('template'));
+	watch(['src/pages/**/*.pug'], parallel('template'));
 	watch(['src/**/*.{' + imageswatch + '}'], parallel('images'));
 	watch(['dist/**/*.{' + fileswatch + '}']).on('change', browserSync.reload);
 }

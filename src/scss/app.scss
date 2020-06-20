@@ -37,6 +37,18 @@ body{
 
 }
 
+.site{
+    display: flex;
+	flex-direction: column;
+    min-height: 100%;
+    .site-top{
+        flex: 1 0 auto;
+    }
+    .site-bottom{
+        flex: 0 0 auto;
+    }
+}
+
 .shell{
     max-width: 1134px;
     padding-left: 17px;
@@ -44,3 +56,6 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
+
+
+@import "components/header.scss";
