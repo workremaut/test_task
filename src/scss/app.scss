@@ -1,0 +1,46 @@
+@import "libs";
+@import "vars";
+@import "mixins";
+@import "fonts";
+
+
+html,
+body{
+    height: 100%;
+}
+
+*{
+    box-sizing: border-box;
+    &::before,
+    &::after{
+        box-sizing: border-box;
+    }
+}
+
+body{
+    font-size: $font-size;
+    line-height: 1.4;
+    color: $text;
+    font-family: $font-family;
+    overflow-x: hidden;
+    min-width: 320px;
+
+    input,
+    textarea,
+    button{
+        outline: none;
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+}
+
+.shell{
+    max-width: 1134px;
+    padding-left: 17px;
+    padding-right: 17px;
+    margin-left: auto;
+    margin-right: auto;
+}
