@@ -1,6 +1,3 @@
-//Polyfill (promise)
-// import 'core-js/features/promise';
-
 class App {
     constructor() {
         this._body = document.querySelector('body');
@@ -12,10 +9,10 @@ class App {
     }
 
     _tabs() {
-        for(let [i, item] of this._linkTabs.entries()) {
-            item.addEventListener('click', (e) => {
+        for(let i = 0;i < this._linkTabs.length; i++) {
+            this._linkTabs[i].addEventListener('click', (e) => {
                 e.preventDefault();
-
+                
                 let target = e.target;
                 let id_item = target.getAttribute('href');
                 
