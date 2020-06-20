@@ -1,4 +1,5 @@
 @import '../vars';
+@import '../mixins';
 
 .tabs__block{
     .tabs__control{
@@ -48,6 +49,9 @@
             font-size: 18px;
             line-height: 128.91%;
             color: $dark;
+            @include media-max($sm) {
+                font-size: 16px;
+            }
         }
         p{
             margin: 0;

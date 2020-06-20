@@ -1,22 +1,39 @@
 @import "../vars";
+@import "../mixins";
 
 footer{
     background-color: $silver;
     padding-top: 35px;
     padding-bottom: 20px;
+    @include media-max($sm) {
+        padding-top: 15px;
+        padding-bottom: 0;
+    }
     .footer__content{
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+        @include media-max($sm) {
+            flex-direction: column;
+        }
         .copyrait{
             font-size: 14px;
             line-height: 24px;
             margin-bottom: 15px;
+            @include media-max($sm) {
+                order: 3;
+            }
         }
         .nav-footer{
             margin-bottom: 15px;
             margin-right: auto;
             margin-left: 16%;
+            @include media-max($md) {
+                margin-left: auto;
+            }
+            @include media-max($sm) {
+                order: 1;
+            }
             ul{
                 list-style-type: none;
                 padding: 0;
@@ -24,6 +41,10 @@ footer{
                 display: flex;
                 margin-left: -20px;
                 margin-right: -20px;
+                @include media-max($xs) {
+                    flex-direction: column;
+                    align-items: center;
+                }
                 li{
                     padding-left: 20px;
                     padding-right: 20px;
@@ -42,6 +63,9 @@ footer{
     }
     .soc-icons{
         margin-bottom: 15px;
+        @include media-max($sm) {
+            order: 2;
+        }
     }
 }
 
